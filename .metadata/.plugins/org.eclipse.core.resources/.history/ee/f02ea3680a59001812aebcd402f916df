@@ -1,0 +1,36 @@
+package statistics;
+
+public class BasicValue {
+
+	public static Float getMeanValue(Float... args) {
+
+		Float result = 0f;
+		if (args != null) {
+			int length = args.length;
+			Float sum = 0f;
+			for (int i = 0; i < length; i++) {
+				sum+=args[i];
+			}
+			
+			result = sum / length;
+			
+		}
+		return result;
+	}
+	
+	public static Float getVariance(Float... args) {
+
+		Float result = 0f;
+		if (args != null) {
+			int length = args.length;
+			Float sum = 0f;
+			for (int i = 0; i < length; i++) {
+				sum+=args[i];
+			}
+			
+			result = sum / length;
+			
+		}
+		return result;
+	}
+}

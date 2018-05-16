@@ -1,0 +1,33 @@
+package statistics;
+
+public class BasicTool {
+
+	public static float getMeanValue(float... args) {
+		float result = 0f;
+		if (args != null) {
+			int length = args.length;
+			float sum = 0f;
+			for (int i = 0; i < length; i++) {
+				sum+=args[i];
+			}
+			
+			result = sum / length;
+			
+		}
+		return result;
+	}
+	
+	public static float getVariance(flloat... args) {
+		float meanValue = getMeanValue(args);
+		float result = 0;
+		if (args != null) {
+			int length = args.length;
+			float sum = 0;
+			for (int i = 0; i < length; i++) {
+				sum+=Math.pow((args[i] - meanValue) , 2);
+			}
+			result = sum / length;
+		}
+		return result;
+	}
+}

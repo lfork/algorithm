@@ -1,0 +1,16 @@
+package statistics;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+//		double[] values = {13.1,5.1,18.0,8.7,16.5,9.8,6.8,12.0,17.8,25.4,19.2,15.8,23.0};
+		double[] values = {1,1,1,1,1,2};
+		
+		System.out.println("均值:" +BasicTool.getMeanValue(values));
+		
+		System.out.println("方差:" + BasicTool.getVariance(values));
+		System.out.println("标准差:" + BasicTool.getStandardDeviation(values));
+	}
+
+}

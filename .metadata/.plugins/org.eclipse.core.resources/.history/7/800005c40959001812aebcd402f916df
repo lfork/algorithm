@@ -1,0 +1,13 @@
+package statistics;
+
+import java.math.*;
+
+public class BasicValue {
+
+	public static int getMeanValue(Integer...args) {
+		
+		return 0;
+	}
+}
+
+

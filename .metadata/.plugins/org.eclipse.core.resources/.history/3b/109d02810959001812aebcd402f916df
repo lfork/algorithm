@@ -1,0 +1,10 @@
+package statistics;
+
+public class BasicValue {
+
+	public static int getMeanValue(int a) {
+		return 0;
+	}
+}
+
+

@@ -1,8 +1,8 @@
 #eclipse files
 .classpath
 .project
-.metadata
-.recommenders
+.metadata/
+.recommenders/
 # Built application files
 *.apk
 *.ap_

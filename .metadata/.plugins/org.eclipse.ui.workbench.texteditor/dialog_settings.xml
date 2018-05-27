@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value=" subset" key="selection"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value=" subset"/>
+			<item value="delete"/>
+			<item value="cut"/>
+			<item value="loadData"/>
+			<item value="`"/>
+			<item value="getSubSet"/>
+			<item value="tradeCount"/>
+			<item value="supports"/>
+			<item value="getConfidence"/>
+			<item value="getSupport"/>
+			<item value="I4"/>
+			<item value="I3"/>
+			<item value="I2"/>
+			<item value="I1"/>
+			<item value="subset"/>
+		</list>
+		<list key="replacehistory">
+			<item value="delete"/>
+			<item value="loadTestData"/>
+			<item value="getSupport"/>
+			<item value=""/>
+			<item value="tea"/>
+			<item value="milk"/>
+			<item value="cream"/>
+			<item value="bread"/>
+			<item value="String"/>
+			<item value="logPrint"/>
+			<item value="C.getItems()"/>
+			<item value="T"/>
+			<item value="getCandidateCollection"/>
+			<item value="items"/>
+			<item value="double"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="356" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="454" key="DIALOG_HEIGHT"/>
+		<item value="966" key="DIALOG_X_ORIGIN"/>
+		<item value="170" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

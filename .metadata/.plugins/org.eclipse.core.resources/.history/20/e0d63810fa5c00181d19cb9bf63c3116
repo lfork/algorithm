@@ -1,0 +1,39 @@
+package apriori;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class ItemSet {
+	private int supportCount = 0;
+
+	private HashSet<String> items;
+
+	public int getSupportCount() {
+		return supportCount;
+	}
+
+	public void setSupportCount(int supportCount) {
+		this.supportCount = supportCount;
+	}
+
+	@Override
+	public String toString() {
+
+		StringBuffer str = new StringBuffer();
+
+		Iterator it = items.iterator();
+
+		if (it.hasNext()) {
+			str.append("{" + it.next());
+		}
+		
+		while (it.hasNext()) {
+			str.append("," + it.next());
+		}
+
+
+		str.append("}\t\t" + supportCount + "\n");
+		return str.toString();
+	}
+
+}

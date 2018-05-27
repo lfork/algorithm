@@ -1,0 +1,4 @@
+package apriori;
+
+public class FrequentCollection extends CandidateCollection{
+}

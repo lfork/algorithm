@@ -1,0 +1,9 @@
+package apriori;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CandidateCollection {
+	List<ItemSet> items = new ArrayList<>();
+
+}

@@ -1,0 +1,18 @@
+package apriori;
+
+import java.util.HashSet;
+
+public class CandidateCollection {
+//	List<ItemSet> items = new ArrayList<>();
+	
+	private HashSet<ItemSet> items;
+	
+	public void addItems(ItemSet i) {
+		items.add(i);
+	}
+	
+	public void deleteItems() {
+		
+	}
+
+}

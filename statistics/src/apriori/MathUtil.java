@@ -57,7 +57,7 @@ public class MathUtil {
 		for (Set<String> subSet : result) {
 			StringBuffer item = new StringBuffer();
 			for (String s : subSet)
-				item.append(s);
+				item.append(s).append(" ");
 
 			String s = item.toString();
 			resultList.add(s);
@@ -76,7 +76,7 @@ public class MathUtil {
 				if (set1.matches(".*"+ s+".*")) {
 					continue;
 				} else {
-					set2.append(s);
+					set2.append(s).append(" ");
 				}
 				
 			}

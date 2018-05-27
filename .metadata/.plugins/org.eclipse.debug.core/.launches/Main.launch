@@ -7,5 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="apriori.Main"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="C:\Users\98620\Desktop\作业\数据挖掘\附件2源程序\dataset.txt 2"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="statistics"/>
 </launchConfiguration>

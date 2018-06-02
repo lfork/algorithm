@@ -1,6 +1,0 @@
-package apriori;
-
-public class ItemSet {
-	private int supportCount=0;
-
-}

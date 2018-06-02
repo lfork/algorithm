@@ -2,15 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value=" subset" key="selection"/>
+		<item value="lableProbability" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="lableProbability"/>
+			<item value=" lableProbability"/>
+			<item value="classValues"/>
+			<item value="cut"/>
+			<item value="cut0"/>
 			<item value=" subset"/>
 			<item value="delete"/>
-			<item value="cut"/>
 			<item value="loadData"/>
 			<item value="`"/>
 			<item value="getSubSet"/>
@@ -19,10 +23,6 @@
 			<item value="getConfidence"/>
 			<item value="getSupport"/>
 			<item value="I4"/>
-			<item value="I3"/>
-			<item value="I2"/>
-			<item value="I1"/>
-			<item value="subset"/>
 		</list>
 		<list key="replacehistory">
 			<item value="delete"/>

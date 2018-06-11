@@ -69,6 +69,11 @@
 		<item value="D:\Development\Java\JavaWorkSpace\math\statistics\doc" key="destdir"/>
 		<item value="false" key="openinbrowser"/>
 		<section name="projects">
+			<section name="data_Mining">
+				<item value="C:\Users\98620\Desktop\data_Mining\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\98620\Desktop\data_Mining\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
 			<section name="statistics">
 				<item value="D:\Development\Java\JavaWorkSpace\math\statistics\javadoc.xml" key="antpath"/>
 				<item value="D:\Development\Java\JavaWorkSpace\math\statistics\doc" key="destdir"/>
@@ -103,6 +108,11 @@
 	</section>
 	<section name="BuildPathsPropertyPage">
 		<item value="3" key="pageIndex"/>
+	</section>
+	<section name="JavaSearchPage">
+		<item value="0" key="HISTORY_SIZE"/>
+		<item value="false" key="CASE_SENSITIVE"/>
+		<item value="15" key="INCLUDE_MASK"/>
 	</section>
 	<section name="completion_proposal_size">
 	</section>

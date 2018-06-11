@@ -120,6 +120,7 @@ public class Main {
 	private void statistic() {
 		for (String[] strings : originData) {
 			String poleType = strings[strings.length - 1];
+			
 			for (int i = 0; i < strings.length - 1; i++) {
 				Integer fre = frequency.get(strings[i] + "|" + poleType);
 				if (fre != null) {

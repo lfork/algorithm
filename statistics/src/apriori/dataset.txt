@@ -1,0 +1,11 @@
+交易号TID	顾客购买的商品
+T1	bread, cream, milk, tea
+T2	bread, cream, milk
+T3	cake, milk
+T4	milk, tea
+T5	bread, cake, milk
+T6	bread, tea
+T7	beer, milk, tea
+T8	bread, tea
+T9	bread, cream, milk, tea
+T10	bread, milk, tea

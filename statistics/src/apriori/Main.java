@@ -27,9 +27,10 @@ public class Main {
 			}
 
 			File file = new File(datafile);
+			System.out.println("\n暂时只能识别ANSI、GBK编码的文件");
 
 			if (!file.exists()) {
-				System.out.println("没有输入请输入源数据地址或地址错误，按照测试数据运行");
+				System.out.println("\n没有输入源数据地址或地址错误，按照测试数据运行");
 				new Main(2).start(file, 2);
 			} else {
 				new Main(minSup).start(file, minSup);
@@ -438,6 +439,7 @@ public class Main {
 					String key1 = realSubSetPair[j][0];
 					String key2 = realSubSetPair[j][1];
 					// System.out.println(realSubSetPair[j][0] + " " + realSubSetPair[j][1]);
+					System.out.println(key0);
 					double support1 = supports.get(key1);
 					double support2 = supports.get(key2);
 					String confidence1 = String.format("%.2f", support0 / support1);

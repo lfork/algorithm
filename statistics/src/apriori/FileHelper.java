@@ -12,6 +12,11 @@ import java.io.Writer;
 
 public class FileHelper {
 	
+
+	public static void main(String[] args) {
+		System.out.println(load("src\\bayes\\dataset.txt"));
+	}
+	
 	public String userDataPath; 
 	
 	public FileHelper() {
@@ -101,7 +106,7 @@ public class FileHelper {
 
 			String str = null;
 			while ((str = in.readLine()) != null) {
-				result.append(str);
+				result.append(str).append("\n");
 			}
 
 		} catch (IOException e) {

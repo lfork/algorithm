@@ -1,4 +1,4 @@
-package k_means;
+package k_means; 
 
 public class Point3 {
 	

@@ -29,8 +29,15 @@ public class Main {
 			try {
 				new Main().start(args[0], args[1]);
 			} catch (Exception e) {
-				e.printStackTrace();
 				System.out.println("文件路径或者格式错误，数据读取失败");
+				System.out.println("程序按照测试数据继续运行\n");
+				
+				try {
+					new Main().start("src/bayes/dataset.txt", "青绿,稍蜷,浊响,清晰,凹陷,硬滑");
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 			
 		} else {
@@ -95,7 +102,7 @@ public class Main {
 	 * @param file 数据源
 	 */
 	private void readFile(File file) {
-		String data = FileHelper.readSpecificEncodingFile(file.getPath(), "gbk");
+		String data = FileHelper.load(file.getPath());
 		String firstLine = data.substring(0, data.indexOf("\n"));
 		firstLine = firstLine.replaceAll(" *", "");
 		firstLine = firstLine.substring(firstLine.indexOf(",") + 1);// 去掉第一列
@@ -111,7 +118,6 @@ public class Main {
 			String[] items = s.split(",");
 			originData.add(items);
 		}
-
 	}
 
 	/**

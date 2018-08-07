@@ -29,7 +29,6 @@ public class SelectSort {
 
     public static void selectSort(){
         int[] array = {3, 1, 6, 7, 8, 2, 4, 9, 5, 0};
-        boolean flag;
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[j] < array[i]){

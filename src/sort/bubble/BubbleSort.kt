@@ -7,6 +7,8 @@ import java.util.*
  * Bubble Sort implementation with Kotlin.
  */
 fun main(args: Array<String>) {
+    val a = 3;
+    val b = a + 2
     val array = intArrayOf(3, 1, 6, 7, 8, 2, 4, 9, 5, 0)
     for (i in array.indices) {
         // -1 for no overflow and

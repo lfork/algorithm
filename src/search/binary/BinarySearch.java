@@ -14,23 +14,23 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] array = {-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
-        System.out.println(binarySearch(array, 3));
+        System.out.println(array[binarySearch(array, -1)]);
     }
 
     public static int binarySearch(int[] array, int value) {
         int head = 0;
         int tail = array.length - 1;
-        int middle;
+        int middle = -1;
         while (head < tail) {
             middle = (head + tail) / 2;
             if (array[middle] == value) {
                 return middle;
-            } else if (array[middle] > value) {
+            } else if (array[middle] < value) {
                 head = middle + 1;
             } else {
                 tail = middle -1;
             }
         }
-        return -1;
+        return middle;
     }
 }

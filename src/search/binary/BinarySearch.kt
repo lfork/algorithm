@@ -12,7 +12,8 @@ package search.binary
  */
 
 fun main(args: Array<String>) {
-    val array = intArrayOf(-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+    val array = intArrayOf(-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+            10, 11)
 
     println(binarySearch(array, 8))
     println(binary(0, array.size - 1, array, 8))
@@ -23,7 +24,7 @@ fun binarySearch(array: IntArray, value: Int): Int {
     var tail = array.size - 1
     var middle: Int
     while (head < tail) {
-        middle = (head + tail + 1) / 2
+        middle = (head + tail) / 2
         if (array[middle] == value) {
             return middle
         } else if (array[middle] < value) {

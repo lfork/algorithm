@@ -21,16 +21,17 @@ import java.util.Arrays;
  */
 public class InsertSort {
     public static void main(String[] args) {
-        insertSort();
+        int[] array = {-1, 0, 3, 1, 6, 7, 8, 2, 4, 9, 5, 5, 5};
+        insertSort(array, 0,array.length -1);
     }
 
     /**
      * asc sort
      */
-    public static void insertSort() {
-        int[] array = {-1, 0, 3, 1, 6, 7, 8, 2, 4, 9, 5, 5, 5};
+    public static void insertSort(int[] array, int head, int tail) {
+
         int temp, position;
-        for (int i = 1; i < array.length; i++) {
+        for (int i = head + 1; i <= tail; i++) {
 
             //save temp value
             temp = array[i];

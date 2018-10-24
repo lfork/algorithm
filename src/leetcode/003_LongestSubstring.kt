@@ -33,15 +33,12 @@ fun main(args: Array<String>) {
 class Solution {
     fun lengthOfLongestSubstring(s: String): Int {
         val subStrings = ArrayList<StringBuilder>()
-
         var strBuf = StringBuilder()
         subStrings.add(strBuf)
-
         s.forEach {
             if (strBuf.contains(it)) {
                 val newBuf =  StringBuilder()
                 val repeatIndex = strBuf.indexOf(it)
-
                 if (repeatIndex + 1 < strBuf.length) {
                     newBuf.append(strBuf.substring(repeatIndex+1))
                 }
@@ -51,7 +48,6 @@ class Solution {
             strBuf.append(it)
         }
         strBuf = subStrings.maxBy { it.length }!!
-        println("The answer is $strBuf, with the length of ${strBuf.length}. ")
         return strBuf.length;
     }
 }

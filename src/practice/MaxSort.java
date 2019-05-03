@@ -11,15 +11,15 @@ import java.util.Arrays;
  */
 class MaxSort {
     public static void main(String[] args) {
-        int[] array = {1, 6, 3, 7, 8, 0, -1, 23, 67, 32, 12, 90};
+        int[] array = {6, 3, 7, 8, 0, -1, 23, 67, 32, 12, 90};
 
         boolean isOrdered = false;
 
         for (int i = 0; i < array.length; i++) {
-            if (isOrdered){
-                break;
-            }
-            isOrdered = true;
+//            if (isOrdered){
+//                break;
+//            }
+//            isOrdered = true;
             int maxIndex = 0;
 
             int max = array[maxIndex];
@@ -29,8 +29,6 @@ class MaxSort {
                 if (max < array[j]) {
                     maxIndex = j;
                     max = array[maxIndex];
-                } else {
-                    isOrdered = false;
                 }
             }
 

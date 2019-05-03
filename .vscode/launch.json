@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MaxSort",
+            "request": "launch",
+            "mainClass": "practice.MaxSort",
+            "projectName": "algorithm_a0738123"
+        }
+    ]
+}

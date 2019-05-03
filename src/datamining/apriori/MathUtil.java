@@ -1,4 +1,4 @@
-package apriori;
+package datamining.apriori;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -171,7 +171,7 @@ public class Main {
 	private void getSubSet() {
 		for (int i = 0; i < D.size(); i++) {
 			String[] items = D.get(i);
-			Set<Set<String>> result = apriori.MathUtil.getSubSetNotNull(items); // 调用方法
+			Set<Set<String>> result = MathUtil.getSubSetNotNull(items); // 调用方法
 			// 输出结果
 			for (Set<String> subSet : result) {
 				StringBuffer item = new StringBuffer();
@@ -438,7 +438,7 @@ public class Main {
 				}
 				double support0 = supports.get(key0.toString());
 
-				String[][] realSubSetPair = apriori.MathUtil.getRealSubSetPair(set);
+				String[][] realSubSetPair = MathUtil.getRealSubSetPair(set);
 
 				for (int j = 0; j < realSubSetPair.length; j++) {
 					String key1 = realSubSetPair[j][0];

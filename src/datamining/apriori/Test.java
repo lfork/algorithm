@@ -1,4 +1,4 @@
-package apriori;
+package datamining.apriori;
 
 public class Test {
 

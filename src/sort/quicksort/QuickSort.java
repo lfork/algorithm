@@ -1,87 +1,109 @@
 package sort.quicksort;
 
-public class QuickSort {
+import java.util.Arrays;
 
-    public static void qSort(int[] arr, int head, int tail) {
-        if (head >= tail || arr == null || arr.length <= 1) {
-            return;
-        }
-        int i = head, j = tail, pivot = arr[(head + tail) / 2];
-        while (i <= j) {
-            while (arr[i] < pivot) {
-                ++i;
-            }
-            while (arr[j] > pivot) {
-                --j;
-            }
-            if (i < j) {
-                int t = arr[i];
-                arr[i] = arr[j];
-                arr[j] = t;
-                ++i;
-                --j;
-            } else if (i == j) {
-                ++i;
-            }
-        }
-        qSort(arr, head, j);
-        qSort(arr, i, tail);
-    }
+/**
+ * Created by 98620 on 2019/5/3. 思想： 1、取数组的第一个元素为pivot 中枢值
+ * 2、把比pivot大的元素放到pivot右边，小的放在左边
+ * 3、选择pivot两边的数组作为子数组，如果子数组的长度<=1，退出排序，否则，继续对子数组进行排序，重复步骤1和2
+ */
+class QuickSort{
 
-    public static void main(String[] args) {
-        int[] arr = new int[]{1, 4, 8, 2, 55, 3, 4, 8, 6, 4, 0, 11, 34, 90, 23, 54, 77, 9, 2, 9, 4, 10};
-        myQuickSort(arr, 0, arr.length - 1);
-        StringBuilder out = new StringBuilder();
-        for (int digit : arr) {
-            out.append(digit).append(",");
-        }
-        System.out.println(out);
-    }
-
-
-    /**
-     * 找到一个pivot，然后把比pivot大的元素放到右边，小的放到左边
+    /*
+     * 5,2,5,4,5 5,8,5,3,3,4
+     * 
+     * 5,5,5,1,2,3
+     * 
+     * 5,6,7,8
+     * 
+     * 5,6,7
      */
-    public static void myQuickSort(int[] arr, int head, int tail) {
-        if (arr == null || arr.length <= 1 || head >= tail) {
+    public static void main(String[] args) {
+        testCase1();
+
+        // testCase2();
+
+        // testCase3();
+
+        // testCase4();
+
+        // testCase5();
+    }
+
+    // 递归实现
+    private static void qucikSort(int[] array, int startIndex, int endIndex) {
+
+        if (startIndex >= endIndex || array == null || array.length <= 1) {
             return;
         }
 
-        int pivot = arr[(head + tail) / 2];
-        int i = head, j = tail;
+        int low = startIndex;
+        int high = endIndex;
 
-        //循环完的结果是i>j
-        while (i <= j) {
-            while (arr[i] < pivot) {
-                i++;
-            }
-            while (arr[j] > pivot) {
-                j--;
-            }
-            if (i < j) {
-                int t = arr[i];
-                arr[i] = arr[j];
-                arr[j] = t;
+        //ToDo 【待优化】 合理选取pivot，比如选取array[startIndex],array[endIndex]
+        //array[(startIndex+endIndex)/2]三个值的中值作为pivotKey
 
-                //在这里做加法和减法的原因：最后可能出现arr[i]=arr[j]==pivot，i<j的情况
-                //所以如果在外面的while等待i++或者是j--的话是可能无法做到的，然后就会出现死循环。可以看当前目录下的error1.png
-                i++;
-                j--;
+        int pivot = array[low];
 
-                //在这里做else if的原因：最后可能出现arr[i]=arr[j]==pivot，i==j的情况
-                //在外面的while里面也不能做i++和j--了，所以要在这里来做。可以看当前目录下的error2.png
-                //还有如果i==j的话可能是会产生死循环的
-            } else if (i == j) {
-                i++;
-                System.out.println(i);
+        // 对子数组进行快排
+        while (low < high) {
+
+      
+            while (low < high && array[high] >= pivot) {
+                high--;
             }
-            System.out.println(i);
+
+            //【优化】 对元素进行替代而不是交换
+            if (low < high) {
+                array[low] = array[high];
+            }
+
+            while (low < high && array[low] < pivot) {
+                low++;
+            }
+
+            //【优化】 对元素进行替代而不是交换
+            if (low < high) {
+                array[high] = array[low];
+            }
         }
+        array[low] = pivot;
+        System.out.println("low:" + low + " high:" + high);
+        // 对左子数组进行排序
+        qucikSort(array, startIndex, low - 1); // 0,0
 
-        //pivot左边的数据进行一次排序
-        myQuickSort(arr, head, j);
+        // 对右子数组进行排序
+        qucikSort(array, low + 1, endIndex);// 0,1
 
-        //pivot右边的数据也进行一次排序
-        myQuickSort(arr, i, tail);
+    }
+
+    private static void testCase1() {
+        int[] array = { 1,2,3,4,5,5,6,7,8,9};
+        qucikSort(array, 0, array.length - 1);
+        System.out.println(Arrays.toString(array));
+    }
+
+    private static void testCase2() {
+        int[] array = { 3, 5 };
+        qucikSort(array, 0, array.length - 1);
+        System.out.println(Arrays.toString(array));
+    }
+
+    private static void testCase3() {
+        int[] array = { 3, 5, 3 };
+        qucikSort(array, 0, array.length - 1);
+        System.out.println(Arrays.toString(array));
+    }
+
+    private static void testCase4() {
+        int[] array = { 5, 3, 5 };
+        qucikSort(array, 0, array.length - 1);
+        System.out.println(Arrays.toString(array));
+    }
+
+    private static void testCase5() {
+        int[] array = { 123, 412, 3, 12, 41, 312, 3, 124, 12, 312, 4, 12, 3, 124, 12, 321 };
+        qucikSort(array, 0, array.length - 1);
+        System.out.println(Arrays.toString(array));
     }
 }

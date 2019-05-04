@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - QuickSortTest2",
+            "request": "launch",
+            "mainClass": "practice.QuickSortTest2",
+            "projectName": "algorithm_a0738123"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QuickSortTest",
+            "request": "launch",
+            "mainClass": "practice.QuickSortTest",
+            "projectName": "algorithm_a0738123"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MaxSort",
             "request": "launch",
             "mainClass": "practice.MaxSort",

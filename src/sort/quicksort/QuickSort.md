@@ -24,9 +24,17 @@
 
 采用“【尾递归】”的方法来减少递归，
 
+
+![尾递归分析](/res/1.jpg)
+
+<center>尾递归分析 </center>
+
 **参考**
+
+
 《大话数据结构》 P427
 [什么是尾递归？ - Coke Zero的回答 - 知乎](https://www.zhihu.com/question/20761771/answer/92233964)
+
 [严蔚敏的数据结构中讲快速排序的疑问？ - hdyjzdj的回答 - 知乎](https://www.zhihu.com/question/43038278/answer/111376160)
 
 
